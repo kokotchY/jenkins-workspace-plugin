@@ -1,0 +1,20 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define"
+	xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form"
+	xmlns:i="jelly:fmt" xmlns:p="/lib/hudson/project">
+<div name="parameter">
+	Listing the content of ${it.project}: 
+	<j:if test="${empty(it.workspaces)}">
+		<em>No element</em>
+	</j:if>
+	<j:if test="${!empty(it.workspaces)}">
+		<!-- <f:entry title="Bla" field="bla"> -->
+		<select name="bla">
+		<j:forEach var="value" items="${it.workspaces}">
+			<option>${value}</option>
+		</j:forEach>
+		</select>
+		<!-- </f:entry> -->
+	</j:if>
+	<input type="hidden" name="name" value="${it.name}"/>
+</div>
+</j:jelly>
