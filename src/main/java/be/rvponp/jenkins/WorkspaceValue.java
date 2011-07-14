@@ -12,21 +12,19 @@ public class WorkspaceValue extends ParameterValue {
 	
 	private String project;
 	
-	private String bla;
+	private String workspaceValue;
 	
-	private String workspaces = "I am from WorkspaceValue" ;
-
-	public String getBla() {
-		return bla;
+	public String getWorkspaceValue() {
+		return workspaceValue;
 	}
 
-	public void setBla(String bla) {
-		this.bla = bla;
+	public void setWorkspaceValue(String workspaceValue) {
+		this.workspaceValue = workspaceValue;
 	}
 
 	@Override
 	public void buildEnvVars(AbstractBuild<?, ?> build, EnvVars env) {
-		env.put(getName(), bla);
+		env.put(getName(), workspaceValue);
 	}
 
 	protected WorkspaceValue(String name, String project) {
@@ -42,14 +40,5 @@ public class WorkspaceValue extends ParameterValue {
 	public void setProject(String project) {
 		this.project = project;
 	}
-
-	public String getWorkspaces() {
-		return workspaces;
-	}
-
-	public void setWorkspaces(String workspaces) {
-		this.workspaces = workspaces;
-	}
-
 
 }

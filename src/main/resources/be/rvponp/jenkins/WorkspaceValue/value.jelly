@@ -3,6 +3,6 @@
 	xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form"
 	xmlns:i="jelly:fmt" xmlns:p="/lib/hudson/project">
 	<f:entry title="${it.name}">
-		<f:textbox name="bla" value="${it.bla}" readonly="true" />
+		<f:textbox name="workspaceValue" value="${it.workspaceValue}" readonly="true" />
 	</f:entry>
 </j:jelly>

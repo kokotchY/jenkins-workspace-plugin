@@ -51,8 +51,8 @@ public class WorkspaceParameter extends ParameterDefinition {
 	@Override
 	public ParameterValue createValue(StaplerRequest req, JSONObject jo) {
 		WorkspaceValue value = new WorkspaceValue(getName(), project);
-		if (jo.has("bla")) {
-			value.setBla(jo.getString("bla"));
+		if (jo.has("workspaceValue")) {
+			value.setWorkspaceValue(jo.getString("workspaceValue"));
 		}
 		return value;
 	}

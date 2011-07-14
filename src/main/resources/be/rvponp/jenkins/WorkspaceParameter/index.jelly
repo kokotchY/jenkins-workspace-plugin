@@ -7,13 +7,11 @@
 		<em>No element</em>
 	</j:if>
 	<j:if test="${!empty(it.workspaces)}">
-		<!-- <f:entry title="Bla" field="bla"> -->
-		<select name="bla">
+		<select name="workspaceValue">
 		<j:forEach var="value" items="${it.workspaces}">
 			<option>${value}</option>
 		</j:forEach>
 		</select>
-		<!-- </f:entry> -->
 	</j:if>
 	<input type="hidden" name="name" value="${it.name}"/>
 </div>
